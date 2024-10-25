@@ -4,5 +4,6 @@
     <string name="Enter_First_Name">Enter First Name</string>
     <string name="Enter_Last_Name">Enter Last Name</string>
     <string name="GEEKSFORGEEKS">GEEKSFORGEEKS</string>
-    <string name="enter_user_info">Enter the user information</string>"
+    <string name="enter_user_info">Enter the user information</string>
+    <string name="HelloWorld">Hello World!</string>
 </resources>
