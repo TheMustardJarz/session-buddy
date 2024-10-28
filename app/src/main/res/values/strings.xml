@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">sessionBuddy</string>
+    <string name="app_name">Session Buddy</string>
     <string name="Submit">Submit</string>
     <string name="Enter_First_Name">Enter First Name</string>
     <string name="Enter_Last_Name">Enter Last Name</string>

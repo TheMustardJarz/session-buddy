@@ -13,11 +13,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.theMustardJarz.sessionbuddy.ui.theme.SessionBuddyTheme
+
 
 class MainActivity : AppCompatActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
@@ -29,8 +32,7 @@ class MainActivity : AppCompatActivity() {
             SessionBuddyTheme {
                 Scaffold(
                     content = {
-                        Modifier.padding(it)
-                        MyComposable()
+                        innerPadding -> Modifier.padding(innerPadding)
                         GreetingPreview()
                     }
                 )
@@ -46,7 +48,15 @@ class MainActivity : AppCompatActivity() {
 
         Scaffold(
             topBar = {
-                TopAppBar(title = { Text("My App") })
+                TopAppBar(
+                    title = {
+                        Text("My App")
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.primaryContainer,
+                        titleContentColor = MaterialTheme.colorScheme.primary
+                    )
+                )
             },
             content = { innerPadding ->
                 Button(onClick = { counter++ }, modifier = Modifier.padding(innerPadding)) {
