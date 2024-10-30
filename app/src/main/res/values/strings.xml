@@ -6,4 +6,5 @@
     <string name="GEEKSFORGEEKS">GEEKSFORGEEKS</string>
     <string name="enter_user_info">Enter the user information</string>
     <string name="HelloWorld">Hello World!</string>
+    <string name="times_clicked">Times Clicked: </string>
 </resources>

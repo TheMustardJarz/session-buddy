@@ -13,15 +13,24 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
         android:text="@string/GEEKSFORGEEKS"
         android:textColor="@color/green_500" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:onClick="hwButtonClicked"
         android:text="@string/HelloWorld" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_700"
+        android:text="@string/times_clicked" />
 
 </LinearLayout><!--End of ViewGroup1-->
