@@ -42,17 +42,6 @@ class MainActivity : AppCompatActivity() {
         var timesClicked by remember { mutableIntStateOf(0) }
 
         Scaffold(
-            topBar = {
-                TopAppBar(
-                    colors = topAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primary,
-                        titleContentColor = MaterialTheme.colorScheme.primaryContainer
-                    ),
-                    title = {
-                        Text("Session Tasks")
-                    }
-                )
-            },
             content = { innerPadding ->
                 Column(Modifier.padding(innerPadding)) {
                     Button(onClick = { timesClicked++ }) {

@@ -27,23 +27,23 @@ class SessionTask(val task: String) {
      */
     @Composable
     fun CreateTask() {
-        var checked = remember { mutableStateOf(false) }
+        var isChecked = remember { mutableStateOf(false) }
 
         Scaffold(
             content = { innerPadding ->
                 Row(Modifier.padding(innerPadding)) {
                     Checkbox(
-                        checked = checked.value,
+                        checked = isChecked.value,
                         onCheckedChange = {
-                            checked.value = it
+                            isChecked.value = it
                         }
                     )
                     Text(
                         text = task,
                         style = TextStyle(
-                            textDecoration = if (checked.value) TextDecoration.LineThrough else TextDecoration.None
+                            textDecoration = if (isChecked.value) TextDecoration.LineThrough else TextDecoration.None
                         ),
-                        color = if (checked.value) Color.Gray else Color.Black
+                        color = if (isChecked.value) Color.Gray else Color.Black
                     )
                 }
             }
