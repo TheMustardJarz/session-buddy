@@ -49,12 +49,12 @@ class SessionActivity() : AppCompatActivity() {
 
     @Composable
     fun SessionTasks() {
-        var tasks = remember { mutableStateListOf<SessionTask>() }
+        val tasks = remember { mutableStateListOf<SessionTask>() }
 
         Scaffold (
             content = { innerPadding ->
                 Column(Modifier.padding(innerPadding)) {
-                    OutlinedButton(onClick = { createNewTask("New Task", tasks) }) {
+                    OutlinedButton(onClick = { tasks.add(SessionTask("New Task")) }) {
                         Text("Add Task")
                     }
                     Text("Tasks")
@@ -66,16 +66,5 @@ class SessionActivity() : AppCompatActivity() {
                 }
             }
         )
-    }
-
-    /**
-     * Creates a new task with the given text, then adds it to the given list.
-     *
-     * @param task The text of the task to create.
-     *
-     * @param taskList The list to add the new task to.
-     */
-    fun createNewTask(task: String, taskList: MutableList<SessionTask>) {
-        taskList.add(SessionTask(task))
     }
 }
